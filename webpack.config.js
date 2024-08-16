@@ -1,6 +1,7 @@
 const path = require('path') ;
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js', //punto de entrada de la applicación
     output: {
         filename: 'bundel.js', //Nombre del archivo de salida
@@ -10,7 +11,7 @@ module.exports = {
     rules: [
         {
             test:/\.css$/, //Regex para identificar archivos CSS
-            use: ['style-loader', 'css-louder'], // Loaders para prosesar archivos CSS
+            use: ['style-loader', 'css-loader'], // Loaders para prosesar archivos CSS
         },
         {
             test: /\.js$/, //regex para identificar archivos JS
@@ -18,15 +19,17 @@ module.exports = {
             use: {
                 loader: 'babel-loader', //Loder para llevar JS moderno a JS antiguo
                 options: {
-                    presents: ['@babel/present-env'],
+                    presets: ['@babel/preset-env'],
                 },
             },
         },
     ],
    },
-   devtool: 'source_map', //Generar source maps para facilitar la depuracion.
+   devtool: 'source-map', //Generar source maps para facilitar la depuracion.
    devServer: {
-    contentBase: path.resolve(__dirname, 'dist'), //Carpeta desde la cual el servidor agregara los archivos
+   static: {
+       directory: path.resolve(__dirname, 'dist'),
+   },
     compress: true, //Habilitar comprencion grip
     port: 9000, //puerto del servidor de desarrollo
    },

@@ -1,11 +1,11 @@
 // Importar la función para traer las tareas del localStorange
-import { getTask } from "./task";
+import { getTasks } from "./task";
 
 //función para visualizar las tareas
 export const renderTasks = ()=> {
     const taskList = document.getElementById("task-list");
     taskList.innerHTML = "";
-    const tasks = getTask();
+    const tasks = getTasks();
     tasks.forEach((task) => {
       const li = document.createElement("li");
       li.setAttribute("data-id", task.id);
