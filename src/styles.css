@@ -39,6 +39,7 @@ button {
      border: none;
      border-radius: 3px;
      cursor: pointer;
+     text-shadow: 1px 1px 2px #000000;
 }
 
 
@@ -49,7 +50,7 @@ ul{
 
 
 li {
-    background-color: #f4f4f4;
+    background-color: rgb(16, 89, 125);
     padding: 10px;
     border: 1px solid #ddd;
     margin-top: 10px;
@@ -62,4 +63,101 @@ li {
 li.completed {
     text-decoration: line-through;
     color: #888;
+}
+.burbuja{
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+   
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 25%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+.burbuja:nth-child(3){
+    width: 45px;
+    height: 45px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+.burbuja:nth-child(4){
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+.burbuja:nth-child(5){
+    width: 65px;
+    height: 65px;
+    left: 75%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+.burbuja:nth-child(6){
+    width: 75px;
+    height: 75px;
+    left: 80%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+.burbuja:nth-child(7){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}.burbuja:nth-child(8){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}.burbuja:nth-child(9){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+.burbuja:nth-child(10){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+     transform: translateX(30px);
+    }
+    50%{
+    opacity: .4;
+    }
+    100%{
+    bottom: 100vh;
+    opacity: 0;
+  }
 }

@@ -109,7 +109,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `/* Estilos Generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #aff3ed;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -117,13 +117,13 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 /*Estilos para el contenedor principal*/
 #app {
-    background-color: white;
+    background-color: #fcf4dd;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 /*Estilos para el formulario*/ 
 form {
@@ -136,13 +136,13 @@ input {
     width: 75%;
     padding: 8px;
     margin-right: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ddedea;
     border-radius: 3px;
 }
 
 button {
     padding: 5px 8px; 
-     background-color: #007bff;
+     background-color: #e8dff5;
      color:  white;
      border: none;
      border-radius: 3px;
@@ -170,7 +170,104 @@ li {
 li.completed {
     text-decoration: line-through;
     color: #888;
-}`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA,sBAAsB;AACtB;IACI,8BAA8B;IAC9B,yBAAyB;IACzB,SAAS;IACT,UAAU;IACV,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA,uCAAuC;AACvC;IACI,uBAAuB;IACvB,aAAa;IACb,kBAAkB;IAClB,uCAAuC;AAC3C;AACA,6BAA6B;AAC7B;IACI,aAAa;IACb,8BAA8B;AAClC;;;AAGA;IACI,UAAU;IACV,YAAY;IACZ,kBAAkB;IAClB,sBAAsB;IACtB,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;KACf,yBAAyB;KACzB,aAAa;KACb,YAAY;KACZ,kBAAkB;KAClB,eAAe;AACpB;;;AAGA;IACI,gBAAgB;IAChB,UAAU;AACd;;;AAGA;IACI,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;;AAGA;IACI,6BAA6B;IAC7B,WAAW;AACf","sourcesContent":["/* Estilos Generales */\r\nbody {\r\n    font-family: Arial, sans-serif;\r\n    background-color: #f4f4f4;\r\n    margin: 0;\r\n    padding: 0;\r\n    height: 100vh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n/*Estilos para el contenedor principal*/\r\n#app {\r\n    background-color: white;\r\n    padding: 20px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n}\r\n/*Estilos para el formulario*/ \r\nform {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n\r\ninput {\r\n    width: 75%;\r\n    padding: 8px;\r\n    margin-right: 10px;\r\n    border: 1px solid #ddd;\r\n    border-radius: 3px;\r\n}\r\n\r\nbutton {\r\n    padding: 5px 8px; \r\n     background-color: #007bff;\r\n     color:  white;\r\n     border: none;\r\n     border-radius: 3px;\r\n     cursor: pointer;\r\n}\r\n\r\n\r\nul{\r\n    list-style: none;\r\n    padding: 0;\r\n}\r\n\r\n\r\nli {\r\n    background-color: #f4f4f4;\r\n    padding: 10px;\r\n    border: 1px solid #ddd;\r\n    margin-top: 10px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\n\r\nli.completed {\r\n    text-decoration: line-through;\r\n    color: #888;\r\n}"],"sourceRoot":""}]);
+}
+.burbuja{
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+   
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 25%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+.burbuja:nth-child(3){
+    width: 45px;
+    height: 45px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+.burbuja:nth-child(4){
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+.burbuja:nth-child(5){
+    width: 65px;
+    height: 65px;
+    left: 75%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+.burbuja:nth-child(6){
+    width: 75px;
+    height: 75px;
+    left: 80%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+.burbuja:nth-child(7){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}.burbuja:nth-child(8){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}.burbuja:nth-child(9){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+.burbuja:nth-child(10){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+     transform: translateX(30px);
+    }
+    50%{
+    opacity: .4;
+    }
+    100%{
+    bottom: 100vh;
+    opacity: 0;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA,sBAAsB;AACtB;IACI,8BAA8B;IAC9B,yBAAyB;IACzB,SAAS;IACT,UAAU;IACV,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;AACA,uCAAuC;AACvC;IACI,yBAAyB;IACzB,aAAa;IACb,kBAAkB;IAClB,uCAAuC;IACvC,gBAAgB;AACpB;AACA,6BAA6B;AAC7B;IACI,aAAa;IACb,8BAA8B;AAClC;;;AAGA;IACI,UAAU;IACV,YAAY;IACZ,kBAAkB;IAClB,yBAAyB;IACzB,kBAAkB;AACtB;;AAEA;IACI,gBAAgB;KACf,yBAAyB;KACzB,aAAa;KACb,YAAY;KACZ,kBAAkB;KAClB,eAAe;AACpB;;;AAGA;IACI,gBAAgB;IAChB,UAAU;AACd;;;AAGA;IACI,yBAAyB;IACzB,aAAa;IACb,sBAAsB;IACtB,gBAAgB;IAChB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;;AAGA;IACI,6BAA6B;IAC7B,WAAW;AACf;AACA;IACI,kBAAkB;IAClB,gBAAgB;IAChB,WAAW;;IAEX,kBAAkB;IAClB,YAAY;;IAEZ,sCAAsC;AAC1C;;AAEA;IACI,WAAW;IACX,YAAY;IACZ,QAAQ;IACR,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB;AACA;IACI,WAAW;IACX,YAAY;IACZ,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB;AACA;IACI,WAAW;IACX,YAAY;IACZ,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB;AACA;IACI,WAAW;IACX,YAAY;IACZ,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB;AACA;IACI,WAAW;IACX,YAAY;IACZ,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB;AACA;IACI,YAAY;IACZ,aAAa;IACb,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB,CAAC;IACG,YAAY;IACZ,aAAa;IACb,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB,CAAC;IACG,YAAY;IACZ,aAAa;IACb,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB;AACA;IACI,YAAY;IACZ,aAAa;IACb,SAAS;IACT,sBAAsB;IACtB,mBAAmB;AACvB;;AAEA;IACI;QACI,SAAS;QACT,UAAU;IACd;IACA;KACC,2BAA2B;IAC5B;IACA;IACA,WAAW;IACX;IACA;IACA,aAAa;IACb,UAAU;EACZ;AACF","sourcesContent":["/* Estilos Generales */\r\nbody {\r\n    font-family: Arial, sans-serif;\r\n    background-color: #aff3ed;\r\n    margin: 0;\r\n    padding: 0;\r\n    height: 100vh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n/*Estilos para el contenedor principal*/\r\n#app {\r\n    background-color: #fcf4dd;\r\n    padding: 20px;\r\n    border-radius: 5px;\r\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n    overflow: hidden;\r\n}\r\n/*Estilos para el formulario*/ \r\nform {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n\r\ninput {\r\n    width: 75%;\r\n    padding: 8px;\r\n    margin-right: 10px;\r\n    border: 1px solid #ddedea;\r\n    border-radius: 3px;\r\n}\r\n\r\nbutton {\r\n    padding: 5px 8px; \r\n     background-color: #e8dff5;\r\n     color:  white;\r\n     border: none;\r\n     border-radius: 3px;\r\n     cursor: pointer;\r\n}\r\n\r\n\r\nul{\r\n    list-style: none;\r\n    padding: 0;\r\n}\r\n\r\n\r\nli {\r\n    background-color: #f4f4f4;\r\n    padding: 10px;\r\n    border: 1px solid #ddd;\r\n    margin-top: 10px;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n}\r\n\r\n\r\nli.completed {\r\n    text-decoration: line-through;\r\n    color: #888;\r\n}\r\n.burbuja{\r\n    border-radius: 50%;\r\n    background: #fff;\r\n    opacity: .3;\r\n\r\n    position: absolute;\r\n    bottom: -150;\r\n   \r\n    animation: burbujas 3s linear infinite;\r\n}\r\n\r\n.burbuja:nth-child(1){\r\n    width: 80px;\r\n    height: 80px;\r\n    left: 5%;\r\n    animation-duration: 3s;\r\n    animation-delay: 3s;\r\n}\r\n\r\n.burbuja:nth-child(2){\r\n    width: 100px;\r\n    height: 100px;\r\n    left: 25%;\r\n    animation-duration: 3s;\r\n    animation-delay: 5s;\r\n}\r\n.burbuja:nth-child(3){\r\n    width: 45px;\r\n    height: 45px;\r\n    left: 52%;\r\n    animation-duration: 5s;\r\n    animation-delay: 5s;\r\n}\r\n.burbuja:nth-child(4){\r\n    width: 10px;\r\n    height: 10px;\r\n    left: 50%;\r\n    animation-duration: 3s;\r\n    animation-delay: 1s;\r\n}\r\n.burbuja:nth-child(5){\r\n    width: 65px;\r\n    height: 65px;\r\n    left: 75%;\r\n    animation-duration: 3s;\r\n    animation-delay: 4s;\r\n}\r\n.burbuja:nth-child(6){\r\n    width: 75px;\r\n    height: 75px;\r\n    left: 80%;\r\n    animation-duration: 3s;\r\n    animation-delay: 2s;\r\n}\r\n.burbuja:nth-child(7){\r\n    width: 100px;\r\n    height: 100px;\r\n    left: 35%;\r\n    animation-duration: 3s;\r\n    animation-delay: 5s;\r\n}.burbuja:nth-child(8){\r\n    width: 100px;\r\n    height: 100px;\r\n    left: 35%;\r\n    animation-duration: 3s;\r\n    animation-delay: 5s;\r\n}.burbuja:nth-child(9){\r\n    width: 100px;\r\n    height: 100px;\r\n    left: 35%;\r\n    animation-duration: 3s;\r\n    animation-delay: 5s;\r\n}\r\n.burbuja:nth-child(10){\r\n    width: 100px;\r\n    height: 100px;\r\n    left: 35%;\r\n    animation-duration: 3s;\r\n    animation-delay: 5s;\r\n}\r\n\r\n@keyframes burbujas{\r\n    0%{\r\n        bottom: 0;\r\n        opacity: 0;\r\n    }\r\n    30%{\r\n     transform: translateX(30px);\r\n    }\r\n    50%{\r\n    opacity: .4;\r\n    }\r\n    100%{\r\n    bottom: 100vh;\r\n    opacity: 0;\r\n  }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
